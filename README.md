@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+🌤 Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Weather App is a modern web application for checking current weather and a 5-day forecast. Built with React, TypeScript, Zustand, and React Query, it demonstrates API integration, state management, and data visualization using charts.
 
-Currently, two official plugins are available:
+🔹 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Current Weather: View real-time weather by city or geolocation
+5-Day Forecast: Min/max temperatures, humidity, and wind speed
+City Search: Search for cities with history of recent searches
+Favorite Cities: Save cities for quick access
+Light/Dark Theme: Toggle between light and dark modes
+Responsive Design: Works on desktop and mobile devices
+Data Visualization: Temperature trends displayed via Recharts
 
-## React Compiler
+🔹 Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React + TypeScript – Frontend framework
+Vite – Fast build and development server
+Zustand – Local state management (search history, favorites)
+React Query (TanStack Query) – Server state management (weather & forecast)
+Tailwind CSS – Utility-first CSS for styling and responsiveness
+shadcn/ui – Prebuilt UI components
+Recharts – Charting library for temperature visualization
 
-## Expanding the ESLint configuration
+🔹 Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Clone the repository:
+git clone https://github.com/username/weather-app.git
+cd weather-app
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Install dependencies:
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Create a .env file in the root folder and add your OpenWeather API key:
+VITE_OPENWEATHER_API_KEY=YOUR_OPENWEATHER_API_KEY
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Start the development server:
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🔹 Build for Production
+npm run build
+
+
+The compiled files will be in the dist/ folder, ready for deployment to services like Vercel or Netlify.
+
+🔹 Usage
+
+Search for a city using the search input
+Click on a city to view current weather and forecast
+Add cities to favorites for quick access
+Toggle between light and dark mode
+View 5-day forecast with interactive charts
+
+🔹 Environment Variables
+Variable	Description
+VITE_OPENWEATHER_API_KEY	Your API key from OpenWeather
+
+Note: .env is excluded from GitHub to protect your API key. Use .env.example as a template.

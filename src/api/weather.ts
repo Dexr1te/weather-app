@@ -6,6 +6,7 @@ import type {
   GeocodingResponse,
 } from "@/shared/types";
 
+
 class WeatherAPI {
   private createUrl(endpoint: string, params: Record<string, string | number>) {
     const searchParams = new URLSearchParams({
