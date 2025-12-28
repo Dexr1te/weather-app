@@ -1,60 +1,85 @@
-🌤 Weather App
+# Weather App 🌤️  
+*(add your badges here — build status, license, version, etc.)*
 
-Weather App is a modern web application for checking current weather and a 5-day forecast. Built with React, TypeScript, Zustand, and React Query, it demonstrates API integration, state management, and data visualization using charts.
+A clean and modern weather forecast application built with **React**, **TypeScript**, **React Query**, and **Zustand**.  
+The app fetches real-time weather data and a 5-day forecast, visualizes it, and provides a smooth, responsive UI.
 
-🔹 Features
+---
 
-Current Weather: View real-time weather by city or geolocation
-5-Day Forecast: Min/max temperatures, humidity, and wind speed
-City Search: Search for cities with history of recent searches
-Favorite Cities: Save cities for quick access
-Light/Dark Theme: Toggle between light and dark modes
-Responsive Design: Works on desktop and mobile devices
-Data Visualization: Temperature trends displayed via Recharts
+## 🌟 Highlights
 
-🔹 Technologies Used
+- **Real-time weather data** from OpenWeather API  
+- **5-day forecast** with hourly details  
+- **Beautiful charts** (Recharts) for temperature forecast  
+- **State management with Zustand** — easy to scale  
+- **React Query for API caching** — fast and efficient  
+- **Responsive design** for desktop & mobile  
+- **Clean and maintainable React + TS architecture**  
 
-React + TypeScript – Frontend framework
-Vite – Fast build and development server
-Zustand – Local state management (search history, favorites)
-React Query (TanStack Query) – Server state management (weather & forecast)
-Tailwind CSS – Utility-first CSS for styling and responsiveness
-shadcn/ui – Prebuilt UI components
-Recharts – Charting library for temperature visualization
+---
 
-🔹 Installation
+## ℹ️ Overview
 
-Clone the repository:
-git clone https://github.com/username/weather-app.git
+Weather App is a simple and elegant solution for checking the weather anywhere in the world.  
+The goal of the project is to practise:
+
+- Clean React component structure  
+- API integration with caching  
+- State management patterns  
+- UI/UX on real-world mini-projects  
+- Data visualization libraries  
+
+This application is easy to extend — you can add units, theming, geolocation, and more.
+
+---
+
+## ✍️ Authors
+
+- **Dexr1te** — creator and maintainer  
+  - GitHub: https://github.com/Dexr1te  
+
+---
+
+## 🚀 Usage
+
+Run the app locally:
+
+```bash
+git clone https://github.com/Dexr1te/weather-app.git
 cd weather-app
-
-Install dependencies:
 npm install
-
-
-Create a .env file in the root folder and add your OpenWeather API key:
-VITE_OPENWEATHER_API_KEY=YOUR_OPENWEATHER_API_KEY
-
-
-Start the development server:
 npm run dev
-
-🔹 Build for Production
-npm run build
-
-
-The compiled files will be in the dist/ folder, ready for deployment to services like Vercel or Netlify.
-
-🔹 Usage
-
-Search for a city using the search input
-Click on a city to view current weather and forecast
-Add cities to favorites for quick access
-Toggle between light and dark mode
-View 5-day forecast with interactive charts
-
-🔹 Environment Variables
-Variable	Description
-VITE_OPENWEATHER_API_KEY	Your API key from OpenWeather
-
-Note: .env is excluded from GitHub to protect your API key. Use .env.example as a template.
+Open the link in your browser (usually):
+http://localhost:5173
+Try searching for any city — the app will show:
+Current temperature
+Feels-like indicator
+Humidity, pressure, wind
+Hourly + 5-day forecast chart
+Example:
+import { fetchWeather } from '@/api'
+const data = await fetchWeather('London')
+console.log(data.main.temp)
+⬇️ Installation
+Requirements:
+Node.js v18+
+npm v9+
+Steps:
+Clone the repository
+Install dependencies
+Run development server
+Add your OpenWeather API key to .env:
+VITE_API_KEY=your_api_key_here
+📁 Project Structure
+src/
+ ├── api/          # API logic (fetching weather)
+ ├── components/   # React UI components
+ ├── features/     # Weather modules/pages
+ ├── store/        # Zustand store
+ ├── shared/       # Reusable helpers & types
+ └── assets/       # Icons, images
+💭 Feedback and Contributing
+Found a bug? Want a new feature?
+Open an Issue in the repository
+Or start a Discussion
+Contributions are welcome — feel free to submit a PR!
