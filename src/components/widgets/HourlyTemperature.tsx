@@ -34,11 +34,11 @@ const HourlyTemperature = (props: Props) => {
   }));
 
   return (
-    <Card className="flex-1 min-w-0">
+    <Card className="w-full min-w-0 max-w-full overflow-hidden">
       <CardHeader>
         <CardTitle>Today's Temperature</CardTitle>
       </CardHeader>
-      <CardContent className="px-0">
+      <CardContent className="w-full min-w-0 px-0">
         <div className="h-[200px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={chartsData}>
