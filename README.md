@@ -1,5 +1,6 @@
+https://roadmap.sh/projects/weather-app
+
 # Weather App 🌤️  
-*(add your badges here — build status, license, version, etc.)*
 
 A clean and modern weather forecast application built with **React**, **TypeScript**, **React Query**, and **Zustand**.  
 The app fetches real-time weather data and a 5-day forecast, visualizes it, and provides a smooth, responsive UI.
